@@ -1,0 +1,36 @@
+{
+  "name": "oreptimiser",
+  "version": "0.1.0",
+  "description": "EVE Online ore purchase optimiser: minimal-volume and cheapest ore mixes for a full blueprint build tree.",
+  "scripts": {
+    "predev": "node scripts/build-sde.mjs --if-missing",
+    "prebuild": "node scripts/build-sde.mjs --if-missing",
+    "pretest": "node scripts/build-sde.mjs --if-missing",
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "data": "node scripts/build-sde.mjs",
+    "icons": "node scripts/make-icons.mjs",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "type": "module",
+  "dependencies": {
+    "highs": "^1.15.4",
+    "preact": "^11.0.1"
+  },
+  "devDependencies": {
+    "@preact/preset-vite": "^2.10.6",
+    "fflate": "^0.8.3",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.4",
+    "vite-plugin-pwa": "^2.0.0",
+    "vitest": "^4.1.11"
+  },
+  "private": true,
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/prellmi/oreptimiser.git"
+  }
+}
